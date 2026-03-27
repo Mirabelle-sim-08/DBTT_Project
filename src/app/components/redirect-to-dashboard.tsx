@@ -5,7 +5,15 @@ export default function RedirectToDashboard() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate("/dashboard", { replace: true });
+    // Check localStorage for user role to redirect to correct dashboard
+    const userRole = localStorage.getItem("userRole");
+    
+    if (userRole === "employer") {
+      navigate("/employer/dashboard", { replace: true });
+    } else {
+      // Default to employee dashboard
+      navigate("/employee/dashboard", { replace: true });
+    }
   }, [navigate]);
 
   return (

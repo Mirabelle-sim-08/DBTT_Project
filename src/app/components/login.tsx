@@ -53,28 +53,14 @@ export default function Login() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-stone-50 flex flex-col">
-      {/* Status Bar */}
-      <div className="bg-white px-4 pt-3 pb-2">
-        <div className="max-w-md mx-auto flex items-center justify-between text-xs">
-          <span className="font-semibold">9:41</span>
-          <div className="flex items-center gap-1">
-            <div className="flex gap-0.5">
-              <div className="w-0.5 h-2 bg-gray-900 rounded-full"></div>
-              <div className="w-0.5 h-2 bg-gray-900 rounded-full"></div>
-              <div className="w-0.5 h-2 bg-gray-900 rounded-full"></div>
-              <div className="w-0.5 h-2 bg-gray-400 rounded-full"></div>
+      {/* Header */}
+      <div className="bg-white px-4 py-4 border-b border-stone-200">
+        <div className="max-w-md mx-auto">
+          <div className="flex items-center gap-3">
+            <div className="w-5 h-5 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center">
+              <Shield className="w-3 h-3 text-white" />
             </div>
-            <svg className="w-4 h-3" viewBox="0 0 16 12" fill="none">
-              <rect
-                x="0.5"
-                y="0.5"
-                width="15"
-                height="11"
-                rx="2"
-                stroke="currentColor"
-              />
-              <rect x="16" y="3" width="1.5" height="6" rx="0.5" fill="currentColor" />
-            </svg>
+            <h1 className="text-xl font-bold text-gray-900">WelderCert</h1>
           </div>
         </div>
       </div>

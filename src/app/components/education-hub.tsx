@@ -149,45 +149,19 @@ export default function EducationHub() {
 
   return (
     <div className="min-h-screen bg-stone-50 pb-24">
-      {/* Status Bar */}
-      <div className="bg-white px-4 pt-3 pb-2 border-b border-stone-200">
-        <div className="max-w-md mx-auto flex items-center justify-between text-xs">
-          <span className="font-semibold">9:41</span>
-          <div className="flex items-center gap-1">
-            <div className="flex gap-0.5">
-              <div className="w-0.5 h-2 bg-gray-900 rounded-full"></div>
-              <div className="w-0.5 h-2 bg-gray-900 rounded-full"></div>
-              <div className="w-0.5 h-2 bg-gray-900 rounded-full"></div>
-              <div className="w-0.5 h-2 bg-gray-400 rounded-full"></div>
-            </div>
-            <svg className="w-4 h-3" viewBox="0 0 16 12" fill="none">
-              <rect
-                x="0.5"
-                y="0.5"
-                width="15"
-                height="11"
-                rx="2"
-                stroke="currentColor"
-              />
-              <rect x="16" y="3" width="1.5" height="6" rx="0.5" fill="currentColor" />
-            </svg>
-          </div>
-        </div>
-      </div>
-
       {/* Header */}
       <div className="bg-white border-b border-stone-200">
         <div className="max-w-md mx-auto px-4 py-4">
           <div className="flex items-center gap-3 mb-4">
             <Link
-              to="/dashboard"
+              to="/employee/dashboard"
               className="w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center hover:bg-stone-200 transition-colors"
             >
               <ArrowLeft className="w-5 h-5 text-gray-700" />
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">Education Hub</h1>
-              <p className="text-sm text-gray-500">Upskill your welding expertise</p>
+              <h1 className="text-2xl font-bold text-gray-900">Skills & Training</h1>
+              <p className="text-sm text-gray-500">Level up your game</p>
             </div>
           </div>
 
@@ -224,7 +198,7 @@ export default function EducationHub() {
             {workshops.map((workshop) => (
               <Link
                 key={workshop.id}
-                to={`/dashboard/workshop/${workshop.id}`}
+                to={`/employee/workshop/${workshop.id}`}
                 className="bg-white rounded-xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow block"
               >
                 <div className="flex">
@@ -363,13 +337,13 @@ export default function EducationHub() {
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-stone-200 safe-area-bottom">
         <div className="max-w-md mx-auto px-4 py-3">
           <div className="flex items-center justify-around">
-            <Link to="/dashboard" className="flex flex-col items-center gap-1">
+            <Link to="/employee/dashboard" className="flex flex-col items-center gap-1">
               <div className="w-10 h-10 flex items-center justify-center">
                 <Award className="w-6 h-6 text-gray-400" />
               </div>
               <span className="text-xs text-gray-500">Home</span>
             </Link>
-            <Link to="/dashboard/wallet" className="flex flex-col items-center gap-1">
+            <Link to="/employee/wallet" className="flex flex-col items-center gap-1">
               <div className="w-10 h-10 flex items-center justify-center">
                 <CheckCircle className="w-6 h-6 text-gray-400" />
               </div>

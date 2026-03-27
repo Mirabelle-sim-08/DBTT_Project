@@ -100,14 +100,14 @@ export default function CertificationWallet() {
         <div className="max-w-md mx-auto px-4 py-4">
           <div className="flex items-center gap-3">
             <Link
-              to="/dashboard"
+              to="/employee/dashboard"
               className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
             >
               <ArrowLeft className="w-6 h-6 text-gray-700" />
             </Link>
             <div className="flex-1">
-              <h1 className="text-lg font-bold text-gray-900">Certification Wallet</h1>
-              <p className="text-xs text-gray-500">All your credentials</p>
+              <h1 className="text-2xl font-bold text-gray-900">My Certs</h1>
+              <p className="text-sm text-gray-500">Your digital wallet</p>
             </div>
             <Award className="w-6 h-6 text-orange-500" />
           </div>
@@ -252,7 +252,7 @@ export default function CertificationWallet() {
 
         {/* Add New Button */}
         <Link
-          to="/dashboard/add-certification"
+          to="/employee/add-certification"
           className="w-full mt-6 mb-20 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-xl transition-colors flex items-center justify-center gap-2 shadow-sm"
         >
           <Shield className="w-5 h-5" />
@@ -264,25 +264,25 @@ export default function CertificationWallet() {
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200">
         <div className="max-w-md mx-auto px-6 py-3">
           <div className="flex items-center justify-around">
-            <Link to="/dashboard" className="flex flex-col items-center gap-1 py-2 px-4">
+            <Link to="/employee/dashboard" className="flex flex-col items-center gap-1 py-2 px-4">
               <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
                 <Home className="w-5 h-5 text-gray-600" />
               </div>
               <span className="text-xs text-gray-600">Home</span>
             </Link>
-            <Link to="/dashboard/wallet" className="flex flex-col items-center gap-1 py-2 px-4">
+            <Link to="/employee/wallet" className="flex flex-col items-center gap-1 py-2 px-4">
               <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
                 <Award className="w-5 h-5 text-white" />
               </div>
               <span className="text-xs text-orange-500 font-medium">Wallet</span>
             </Link>
-            <Link to="/dashboard/education" className="flex flex-col items-center gap-1 py-2 px-4">
+            <Link to="/employee/education" className="flex flex-col items-center gap-1 py-2 px-4">
               <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
                 <GraduationCap className="w-5 h-5 text-gray-600" />
               </div>
               <span className="text-xs text-gray-600">Learn</span>
             </Link>
-            <Link to="/dashboard/verify" className="flex flex-col items-center gap-1 py-2 px-4">
+            <Link to="/employee/verify" className="flex flex-col items-center gap-1 py-2 px-4">
               <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
                 <ScanLine className="w-5 h-5 text-gray-600" />
               </div>

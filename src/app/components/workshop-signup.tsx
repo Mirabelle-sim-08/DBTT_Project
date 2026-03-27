@@ -153,32 +153,6 @@ export default function WorkshopSignup() {
   if (registered) {
     return (
       <div className="min-h-screen bg-stone-50">
-        {/* Status Bar */}
-        <div className="bg-white px-4 pt-3 pb-2 border-b border-stone-200">
-          <div className="max-w-md mx-auto flex items-center justify-between text-xs">
-            <span className="font-semibold">9:41</span>
-            <div className="flex items-center gap-1">
-              <div className="flex gap-0.5">
-                <div className="w-0.5 h-2 bg-gray-900 rounded-full"></div>
-                <div className="w-0.5 h-2 bg-gray-900 rounded-full"></div>
-                <div className="w-0.5 h-2 bg-gray-900 rounded-full"></div>
-                <div className="w-0.5 h-2 bg-gray-400 rounded-full"></div>
-              </div>
-              <svg className="w-4 h-3" viewBox="0 0 16 12" fill="none">
-                <rect
-                  x="0.5"
-                  y="0.5"
-                  width="15"
-                  height="11"
-                  rx="2"
-                  stroke="currentColor"
-                />
-                <rect x="16" y="3" width="1.5" height="6" rx="0.5" fill="currentColor" />
-              </svg>
-            </div>
-          </div>
-        </div>
-
         {/* Success Message */}
         <div className="max-w-md mx-auto px-4 py-12">
           <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
@@ -236,37 +210,11 @@ export default function WorkshopSignup() {
 
   return (
     <div className="min-h-screen bg-stone-50 pb-8">
-      {/* Status Bar */}
-      <div className="bg-white px-4 pt-3 pb-2 border-b border-stone-200">
-        <div className="max-w-md mx-auto flex items-center justify-between text-xs">
-          <span className="font-semibold">9:41</span>
-          <div className="flex items-center gap-1">
-            <div className="flex gap-0.5">
-              <div className="w-0.5 h-2 bg-gray-900 rounded-full"></div>
-              <div className="w-0.5 h-2 bg-gray-900 rounded-full"></div>
-              <div className="w-0.5 h-2 bg-gray-900 rounded-full"></div>
-              <div className="w-0.5 h-2 bg-gray-400 rounded-full"></div>
-            </div>
-            <svg className="w-4 h-3" viewBox="0 0 16 12" fill="none">
-              <rect
-                x="0.5"
-                y="0.5"
-                width="15"
-                height="11"
-                rx="2"
-                stroke="currentColor"
-              />
-              <rect x="16" y="3" width="1.5" height="6" rx="0.5" fill="currentColor" />
-            </svg>
-          </div>
-        </div>
-      </div>
-
       {/* Header */}
       <div className="bg-white border-b border-stone-200">
         <div className="max-w-md mx-auto px-4 py-4">
           <Link
-            to="/dashboard/education"
+            to="/employee/education"
             className="w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center hover:bg-stone-200 transition-colors inline-flex mb-4"
           >
             <ArrowLeft className="w-5 h-5 text-gray-700" />

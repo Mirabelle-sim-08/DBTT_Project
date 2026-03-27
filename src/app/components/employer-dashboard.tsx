@@ -37,6 +37,7 @@ interface Welder {
 export default function EmployerDashboard() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterStatus, setFilterStatus] = useState<"all" | "compliant" | "warning" | "critical">("all");
+  const [showActionPlan, setShowActionPlan] = useState(false);
 
   // Mock workforce data
   const workforce: Welder[] = [
@@ -273,7 +274,10 @@ export default function EmployerDashboard() {
                 Based on current patterns, <strong>{predictedNonCompliant} welders</strong> will become non-compliant within the next 90 days without immediate action.
               </p>
               <div className="flex items-center gap-2">
-                <button className="bg-white text-red-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-red-50 transition-colors">
+                <button
+                  className="bg-white text-red-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-red-50 transition-colors"
+                  onClick={() => setShowActionPlan(true)}
+                >
                   View Action Plan
                 </button>
                 <button className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
@@ -572,6 +576,57 @@ export default function EmployerDashboard() {
           </Link>
         </div>
       </div>
+
+      {/* Action Plan Modal */}
+      {showActionPlan && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl p-6 w-full max-w-2xl">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xl font-bold text-gray-900">Action Plan</h3>
+              <button
+                className="p-2 hover:bg-gray-100 rounded-full"
+                onClick={() => setShowActionPlan(false)}
+              >
+                <XCircle className="w-5 h-5 text-gray-500" />
+              </button>
+            </div>
+
+            <p className="text-sm text-gray-600 mb-4">
+              Implement the following steps to address the predicted non-compliance:
+            </p>
+
+            <div className="space-y-3">
+              <div className="bg-gray-50 rounded-lg p-3">
+                <p className="text-sm text-gray-500 mb-1">Step 1</p>
+                <p className="text-sm font-semibold text-gray-900">
+                  Review upcoming certification expirations.
+                </p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-3">
+                <p className="text-sm text-gray-500 mb-1">Step 2</p>
+                <p className="text-sm font-semibold text-gray-900">
+                  Schedule renewal training for affected welders.
+                </p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-3">
+                <p className="text-sm text-gray-500 mb-1">Step 3</p>
+                <p className="text-sm font-semibold text-gray-900">
+                  Monitor progress and ensure compliance.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-4 flex justify-end">
+              <button
+                className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors"
+                onClick={() => setShowActionPlan(false)}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

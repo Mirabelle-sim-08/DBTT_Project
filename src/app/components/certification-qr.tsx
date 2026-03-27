@@ -57,7 +57,7 @@ export default function CertificationQR() {
         <div className="max-w-md mx-auto px-4 py-4">
           <div className="flex items-center gap-3">
             <Link
-              to="/dashboard/wallet"
+              to="/employee/wallet"
               className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
             >
               <ArrowLeft className="w-6 h-6 text-gray-700" />

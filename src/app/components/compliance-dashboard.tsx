@@ -115,7 +115,7 @@ export default function ComplianceDashboard() {
         <div className="max-w-md mx-auto px-4 py-6">
           <div className="flex items-center gap-3 mb-6">
             <Link
-              to="/dashboard"
+              to="/employee/dashboard"
               className="p-2 hover:bg-white/20 rounded-lg transition-colors"
             >
               <ArrowLeft className="w-6 h-6" />
@@ -323,7 +323,7 @@ export default function ComplianceDashboard() {
                     )}
 
                     <Link
-                      to="/dashboard/education"
+                      to="/employee/education"
                       className={`w-full py-2.5 px-4 rounded-lg font-medium text-sm flex items-center justify-center gap-2 transition-colors ${
                         isCritical
                           ? "bg-red-500 hover:bg-red-600 text-white"

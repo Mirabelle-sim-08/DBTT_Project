@@ -19,40 +19,23 @@ import {
 } from "lucide-react";
 
 export default function Dashboard() {
-  // Check if user is using employee or employer routes
-  const isEmployeeRoute = window.location.pathname.startsWith("/employee");
-  const baseRoute = isEmployeeRoute ? "/employee" : "/dashboard";
+  // Always use employee routes since this is the employee dashboard
+  const baseRoute = "/employee";
   
   return (
     <div className="min-h-screen bg-stone-50">
-      {/* Status Bar */}
-      <div className="bg-stone-50 px-4 pt-3 pb-2">
-        <div className="max-w-md mx-auto flex items-center justify-between text-xs">
-          <span className="font-semibold">9:41</span>
-          <div className="flex items-center gap-1">
-            <div className="flex gap-0.5">
-              <div className="w-0.5 h-2 bg-gray-900 rounded-full"></div>
-              <div className="w-0.5 h-2 bg-gray-900 rounded-full"></div>
-              <div className="w-0.5 h-2 bg-gray-900 rounded-full"></div>
-              <div className="w-0.5 h-2 bg-gray-400 rounded-full"></div>
-            </div>
-            <svg className="w-4 h-3" viewBox="0 0 16 12" fill="none">
-              <rect x="0.5" y="0.5" width="15" height="11" rx="2" stroke="currentColor"/>
-              <rect x="16" y="3" width="1.5" height="6" rx="0.5" fill="currentColor"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-
       {/* Header */}
-      <div className="bg-stone-50 px-4 pb-4">
-        <div className="max-w-md mx-auto flex items-center justify-between">
-          <button className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
-            <User className="w-5 h-5 text-gray-700" />
-          </button>
-          <button className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
-            <Settings className="w-5 h-5 text-gray-700" />
-          </button>
+      <div className="bg-stone-50 px-4 pb-4 pt-4">
+        <div className="max-w-md mx-auto">
+          <div className="flex items-center justify-between mb-2">
+            <div>
+              <h1 className="text-2xl font-bold text-gray-900">Hey Marcus 👋</h1>
+              <p className="text-sm text-gray-500 mt-0.5">Let's get to work</p>
+            </div>
+            <button className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
+              <Settings className="w-5 h-5 text-gray-700" />
+            </button>
+          </div>
         </div>
       </div>
 
@@ -224,7 +207,7 @@ export default function Dashboard() {
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200">
         <div className="max-w-md mx-auto px-6 py-3">
           <div className="flex items-center justify-around">
-            <Link to={baseRoute} className="flex flex-col items-center gap-1 py-2 px-4">
+            <Link to={`${baseRoute}/dashboard`} className="flex flex-col items-center gap-1 py-2 px-4">
               <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
                 <Home className="w-5 h-5 text-white" />
               </div>
