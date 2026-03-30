@@ -38,7 +38,7 @@
   https://dbtt-project.vercel.app/
 
   ## Wireframes
-  Figma: https://www.figma.com/file/XYZ123/Unified-Certification-Portal
+  Figma: https://www.figma.com/design/1n7wrgrZWCx2Av4dkephBA/User-dashboard-prototype
 
   ## Source Code
   - Certification Analytics & Fraud Detection: https://github.com/Mirabelle-sim-08/DBTT_Project
